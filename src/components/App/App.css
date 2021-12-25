@@ -32,8 +32,6 @@
 }
 .card-text {
   width: 100%;
-
-  /* border: solid red 1px; */
 }
 .all-cards {
   display: flex;
@@ -50,6 +48,7 @@
 .new-card {
   display: flex;
   width: 100vw;
+  border: 0.5px solid rgb(243, 72, 72);
 }
 
 .new-card input {

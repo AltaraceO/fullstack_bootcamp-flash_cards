@@ -6,7 +6,6 @@ import Display from "../Display";
 import ManageCards from "../Manage";
 
 class App extends React.Component {
-  // state = { cards: [] };
   render() {
     return (
       <div>
