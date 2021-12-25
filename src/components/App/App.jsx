@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "../NavBar";
 import DisplayCard from "../DisplayCard";
-import ManageCards from "../ManageCards";
+import ManageCards from "../Manage";
 
 class App extends React.Component {
   state = { cards: [] };
