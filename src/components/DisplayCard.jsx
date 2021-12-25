@@ -29,7 +29,7 @@ class DisplayCard extends Component {
   nextCard = () => {
     this.setState({ visibilityUpdate: false });
     const tempIdx = this.state.index;
-    this.setState({ index: tempIdx + 1 });
+    this.setState({ index: tempIdx + 1, remember: false });
   };
 
   indexFunction = () => {
@@ -53,7 +53,6 @@ class DisplayCard extends Component {
     this.getCard();
   }
   render() {
-    console.log(this.state.remember);
     const cards = this.state.cards;
 
     if (cards.length) {
@@ -70,15 +69,15 @@ class DisplayCard extends Component {
           )}
 
           {this.state.remember ? (
-            <div>
-              did you remember?
+            <div className="did-you">
+              Did you remember?
               <div className="card-buttons">
                 <button
                   onClick={() => this.delete(cards[this.indexFunction()].id)}
                 >
-                  yes
+                  Yes
                 </button>
-                <button onClick={this.bothBooleans}>no</button>
+                <button onClick={this.bothBooleans}>No</button>
               </div>
             </div>
           ) : (
@@ -86,13 +85,13 @@ class DisplayCard extends Component {
           )}
 
           <div className="card-buttons">
-            <button onClick={this.bothBooleans}>flip</button>
-            <button onClick={this.nextCard}>next</button>
+            <button onClick={this.bothBooleans}>Flip</button>
+            <button onClick={this.nextCard}>Next</button>
           </div>
         </div>
       );
     } else {
-      return <div>loading...</div>;
+      return <div>Loading...</div>;
     }
   }
 }
