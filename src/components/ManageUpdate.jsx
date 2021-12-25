@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import api from "./api";
+import api from "../api";
 
 class Update extends Component {
   state = { question: "", answer: "", id: "" };
 
   onClickHandle = async () => {
     this.props.visFunc();
-
     await api.put(this.props.id, this.state);
     this.props.funcGetCard();
   };
@@ -26,15 +25,15 @@ class Update extends Component {
           onChange={this.handleOnChange}
           type="text"
           name="question"
-          placeholder="New Question"
+          placeholder="Change the question"
           value={this.state.first}
         />
         <br />
         <input
           onChange={this.handleOnChange}
           type="text"
-          name="Answer"
-          placeholder="New Answer"
+          name="answer"
+          placeholder="Change the answer"
           value={this.state.last}
         />
         <br />

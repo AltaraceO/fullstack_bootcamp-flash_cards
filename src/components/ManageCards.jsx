@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ManageUpdate from "./ManageUpdate";
-import api from "./api";
+import api from "../api";
 
 class ManageCards extends Component {
   state = { visibilityUpdate: false, id: "" };

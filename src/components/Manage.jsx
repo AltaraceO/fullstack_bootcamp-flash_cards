@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import ManageCards from "./ManageCards";
 import ManageCreate from "./ManageCreate";
 import api from "../api";
@@ -27,7 +27,7 @@ class Manage extends React.Component {
     return (
       <div className="card-container">
         <div>{cardList}</div>
-        <ManageCreate />
+        <ManageCreate funcGetCard={this.getCard} />
       </div>
     );
   }

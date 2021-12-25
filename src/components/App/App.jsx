@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "../NavBar";
-import DisplayCard from "../DisplayCard";
+import Display from "../Display";
 import ManageCards from "../Manage";
 
 class App extends React.Component {
@@ -14,7 +14,7 @@ class App extends React.Component {
           <div>
             <NavBar />
             <Route exact path="/">
-              <DisplayCard />
+              <Display />
             </Route>
             <Route exact path="/manage/">
               <ManageCards />

@@ -1,19 +1,15 @@
 import React, { Component } from "react";
-import api from "./api";
+import api from "../api";
 
 class ManageCreate extends Component {
   state = { question: "", answer: "", id: "" };
-
-  // generate unique ID
 
   handleOnChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
   onClickHandle = async () => {
     const newObj = this.state;
-    console.log(newObj);
     await api.post("", newObj);
-
     this.props.funcGetCard();
   };
 
