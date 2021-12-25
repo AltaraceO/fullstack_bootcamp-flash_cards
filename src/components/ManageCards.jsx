@@ -27,14 +27,14 @@ class ManageCards extends Component {
         />
       );
     return (
-      <div>
-        <div>
+      <div className="card-container">
+        <div className="card-text">
           <strong>Question:</strong> {this.props.card.question}
+          <br />
+          <br />
+          <strong>Answer:</strong> {this.props.card.answer}
         </div>
-        <br />
-        <strong>Answer:</strong> {this.props.card.answer}
-        <br />
-        <div>
+        <div className="card-buttons">
           <button onClick={this.deleteCard}>Delete</button>
           <button onClick={this.changeVis}>Update</button>
         </div>

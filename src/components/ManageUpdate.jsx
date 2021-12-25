@@ -20,7 +20,7 @@ class Update extends Component {
 
   render() {
     return (
-      <div>
+      <div className="card-container">
         <input
           onChange={this.handleOnChange}
           type="text"
@@ -37,9 +37,10 @@ class Update extends Component {
           value={this.state.last}
         />
         <br />
-
-        <button onClick={this.onClickHandle}>Update</button>
-        <button onClick={this.candelClick}>Cancel</button>
+        <div className="card-buttons">
+          <button onClick={this.onClickHandle}>Update</button>
+          <button onClick={this.candelClick}>Cancel</button>
+        </div>
       </div>
     );
   }

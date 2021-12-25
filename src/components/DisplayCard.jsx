@@ -16,7 +16,7 @@ class DisplayCard extends Component {
   };
 
   nextCard = () => {
-    this.changeVis();
+    this.setState({ visibilityUpdate: false });
     const tempIdx = this.state.index;
     this.setState({ index: tempIdx + 1 });
   };
@@ -24,26 +24,30 @@ class DisplayCard extends Component {
     this.getCard();
   }
 
-  zero = () => {
-    this.setState({ index: 0 });
+  indexFunction = () => {
+    const cardLng = this.state.cards.length - 1;
+    const currIdx = this.state.index;
+    console.log(cardLng, currIdx);
+    if (currIdx > cardLng) {
+      this.setState({ index: 0 });
+      return 0;
+    }
+    return this.state.index;
   };
 
   render() {
-    const newArr = this.state.cards.map((card) => {
-      return card;
-    });
+    const cards = this.state.cards;
 
-    // if (this.state.visibilityUpdate) return <div>trying to update hey?</div>;
-    if (newArr.length) {
+    if (cards.length) {
       return (
-        <div>
+        <div className="card-display-container">
           {this.state.visibilityUpdate ? (
             <div>
-              <strong>Answer:</strong> {newArr[this.state.index].answer}
+              <strong>Answer:</strong> {cards[this.indexFunction()].answer}
             </div>
           ) : (
             <div>
-              <strong>Question:</strong> {newArr[this.state.index].question}
+              <strong>Question:</strong> {cards[this.indexFunction()].question}
             </div>
           )}
 

@@ -25,9 +25,9 @@ class Manage extends React.Component {
     });
 
     return (
-      <div className="card-container">
-        <div>{cardList}</div>
+      <div className="x">
         <ManageCreate funcGetCard={this.getCard} />
+        <div className="all-cards">{cardList}</div>
       </div>
     );
   }

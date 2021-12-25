@@ -1,3 +1,77 @@
 .app {
   display: inline-block;
 }
+
+.nav-bar {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: azure;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  font-size: larger;
+  padding-right: 20px;
+  color: darkslategray;
+}
+
+.card-container {
+  border: 1px solid slategray;
+  margin: 10px;
+  width: 300px;
+  min-height: 6rem;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.card-text {
+  width: 100%;
+
+  /* border: solid red 1px; */
+}
+.all-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-buttons button {
+  margin: 3px;
+}
+
+.new-card {
+  display: flex;
+  width: 100vw;
+}
+
+.new-card input {
+  width: 80vw;
+}
+.new-card-click {
+  width: 20vw;
+}
+
+.card-display-container {
+  border: solid tomato 2px;
+  width: 80%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.cards-display-main {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -4,7 +4,7 @@ import DisplayCard from "./DisplayCard";
 class Display extends Component {
   render() {
     return (
-      <div>
+      <div className="cards-display-main">
         <DisplayCard />
       </div>
     );
